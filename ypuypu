@@ -109,9 +109,7 @@ do
             ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName ,
             ["embeds"] = {
                 {
-                ["title"] = "Skids API",
-                ["description"] = "__a library made for skids :wink:__",
-                ["url"] = "https://discord.gg/EUaH265S",
+                ["title"] = "Execution Log",
                 ["color"] = 526344,
                 ["fields"] = {
                     {
@@ -120,13 +118,8 @@ do
                     }
                 },
                 ["author"] = {
-                    ["name"] = "Skids Hub/ramirez",
-                    ["url"] = "https://discord.gg/EUaH265S",
-                    ["icon_url"] = "https://media.discordapp.net/attachments/923562111660093451/927356696580456498/standard_1.gif"
                 },
                 ["footer"] = {
-                    ["text"] = "Skids Hub/ramirez",
-                    ["icon_url"] = "https://media.discordapp.net/attachments/923562111660093451/927356696580456498/standard_1.gif"
                 },
                 ["thumbnail"] = {
                     ["url"] = gameThumb
