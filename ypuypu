@@ -54,7 +54,6 @@ do
                             }
                         },
                         ["author"] = {
-                            ["name"] = "Execution Log",
                         },
                         ["footer"] = {
                         },
