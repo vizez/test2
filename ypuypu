@@ -38,7 +38,6 @@ do
                 ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') ' .. scriptName,
                 ["embeds"] = {
                         {
-                        ["title"] = "**Execution Log**",
                         ['thumbnail'] = {
                             ['url']=string.format('https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&UserId=%d&format=png',player.UserId)
                         },
@@ -100,7 +99,7 @@ do
 
             if not self then return end
 
-            scriptName = scriptName or 'Viva Mexico!'
+            scriptName = scriptName or 'Executed'
             local player = game.Players.LocalPlayer
             local gameThumb = string.format('https://www.roblox.com/asset-thumbnail/image?assetId=%d&width=768&height=432&format=png',game.PlaceId)
 
