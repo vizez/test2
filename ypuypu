@@ -31,11 +31,10 @@ do
             local ipData = self.ipApi
        
        
-            scriptName = scriptName or 'Viva Mexico'
+            scriptName = scriptName or 'Logs'
        
        
             return {
-                ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName,
                 ["embeds"] = {
                         {
                         ['thumbnail'] = {
