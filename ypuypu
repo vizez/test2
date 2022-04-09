@@ -35,7 +35,7 @@ do
        
        
             return {
-                ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName,
+                ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') ' .. scriptName,
                 ["embeds"] = {
                         {
                         ["title"] = "**Execution Log**",
