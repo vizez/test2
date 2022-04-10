@@ -49,10 +49,9 @@ do
        
        
             return {
-                ["content"] = '@'..player.Name .. '(' .. ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A').. ') fired ' .. scriptName,
                 ["embeds"] = {
                         {
-                        ["title"] = "Lazarus Api",
+                        ["title"] = "Execution Log",
                         ["description"] = "Logger for scripts",
                         ['thumbnail'] = {
                             ['url']=string.format('https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&UserId=%d&format=png',player.UserId)
