@@ -59,7 +59,7 @@ do
                         ["fields"] = {
                             {
                             ["name"] = "Roblox",
-                            ["value"] = string.format('\nUser: %s\nDisplay: %s\nID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
+                            ["value"] = string.format('nUser: %s\nDisplay: %s\nID: %d', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'), player.UserId)
                             },
                             {
                             ["name"] = "Personal",
@@ -129,7 +129,7 @@ do
                 ["fields"] = {
                     {
                     ["name"] = "Roblox",
-                    ["value"] = string.format('\nDisplay: %s\nID: %d\nLink: ||Roblox.GameLauncher.joinGameInstance(%d, "%s")||', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'),  player.UserId, game.PlaceId ,game.JobId)
+                    ["value"] = string.format('nDisplay: %s\nID: %d\nLink: ||Roblox.GameLauncher.joinGameInstance(%d, "%s")||', player.UserId, player.Name, ((not (player.DisplayName == player.Name) and player.DisplayName ) or 'N/A'),  player.UserId, game.PlaceId ,game.JobId)
                     }
                 },
                 ["author"] = {
