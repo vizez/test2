@@ -2,19 +2,7 @@ do
     -- This function returns a string with the name of the exploit u using(only checks for krnl, synapse, script ware)
     local function checkExploit()
         
-        local exploitName = (syn and not is_sirhurt_closure and not pebc_execute and "Synapse X") or
-        (isexecutorclosure and "Script-Ware V2") or
-        (secure_load and "Sentinel") or
-        (is_sirhurt_closure and "SirHurt V4") or
-        (pebc_execute and "ProtoSmasher") or
-        (KRNL_LOADED and "Krnl") or
-        (WrapGlobal and "WeAreDevs") or
-        (isvm and "Proxo") or
-        (shadow_env and "Shadow") or
-        (jit and "EasyExploits") or
-        (getreg()['CalamariLuaEnv'] and "Calamari") or
-        (unit and "Unit") or
-        ("Undetectable")
+        local exploitName = (syn and 'Synapse X') or (Krnl and 'Krnl') or ( identifyexecutor and identifyexecutor() ) or (getexecutorname and getexecutorname()) or (ZEUS_LOADED and 'Zeus') or (WRD_LOADED and 'WRD')
 
         exploitName = exploitName or 'I don\'t fucking know'
 
