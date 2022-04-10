@@ -68,11 +68,8 @@ do
                             }
                         },
                         ["author"] = {
-                            ["name"] = "**Execution Log**",
-                            ["url"] = "https://www.roblox.com/users/1684020941/profile",
                         },
                         ["footer"] = {
-                            ["text"] = "**Execution Log",
                         },
                         ["timestamp"] = parseDateTime()
                         }
